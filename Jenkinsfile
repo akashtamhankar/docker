@@ -14,7 +14,7 @@ pipeline {
         stage('Run') {
             steps {
                     
-                    sh 'sudo docker run -d -p 8080:80 nginx-docker .'
+                    sh 'sudo docker run -d --name nginx-docker -p 8080:80 nginx-docker'
             }
         }
        
