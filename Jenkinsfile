@@ -17,8 +17,12 @@ pipeline {
                     sh 'sudo docker run -d --name nginx-docker -p 8080:80 nginx-docker'
             }
         }
-       
-        
-       
+        stage('Curl') {
+            steps {
+                    
+                    sh 'curl http://localhost:8080'
+            }
+        }
+              
     }
 }
